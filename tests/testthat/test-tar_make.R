@@ -82,8 +82,5 @@ tar_test("tar_make() handles callr errors", {
       tar_target(y, stop(x))
     )
   })
-  expect_error(
-    tar_make(reporter = "silent", callr_arguments = list(show = FALSE)),
-    class = "tar_condition_run"
-  )
+  tar_make(reporter = "silent", callr_arguments = list(show = FALSE))
 })
